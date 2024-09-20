@@ -1,0 +1,28 @@
+Створення таблиці users з полями id, name, age, email, де поле id – первинний ключ, автоінкрементний
+
+CREATE TABLE IF NOT EXISTS users (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	age INTEGER NOT NULL,
+	email TEXT
+);
+
+
+Вставка даних у таблицю users
+
+INSERT INTO users
+(name, age, email)
+VALUES
+("John", 30, "john@example.com"),
+("Alice", 25, "alice@example.com"),
+("Bob", 35, "bob@example.com");
+
+
+Вибірка даних: всі записи з таблиці users
+
+SELECT * FROM users;
+
+
+Видалення даних: користувача з ім'ям "Bob"
+
+DELETE FROM users WHERE name = "Bob";
